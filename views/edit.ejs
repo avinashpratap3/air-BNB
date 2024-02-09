@@ -1,0 +1,73 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row">
+    <div class="col-8 offset-2">
+
+
+    <h3>Edit your listing</h3>
+    <form method="post" action="/listings/<%= selected._id %>?_method=PUT" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title">Title</label>
+            <input type="text" name="title" value="<%= selected.title %>" required class="form-control">
+
+
+        </div>
+        <br><br>
+        <div class="mb-3">
+            <label for="description" form="form-label">Description</label>
+
+            <textarea name="description" required class="form-control"><%= selected.description %></textarea>
+
+        </div>
+        
+        <br><br>
+        <div class="mb-3" >
+           <img class="image" src="<%= selected.image.url %>">
+
+
+        </div>
+        <div class="mb-3">
+            <label for="image" form="form-label">Image</label>
+
+            <input type="file" name="image" class="form-control">
+
+
+        </div>
+        <br><br>
+        <div class="mb-3">
+            <label for="title" form="form-label" >Price</label>
+
+            <input type="number" name="price" required value="<%= selected.price %>" class="form-control">
+
+
+        </div>
+        <div class="mb-3">
+            <label for="title" form="form-label" >Location</label>
+
+            <input type="text" name="location" required value="<%= selected.location %>" class="form-control">
+
+
+
+        </div>
+        <div class="mb-3">
+            <label for="title" form="form-label" >Country</label>
+
+            <input type="text" name="country" required value="<%= selected.country %>" class="form-control">
+
+
+
+
+        </div>
+        
+
+        
+
+      
+        
+        <button type="submit" class="btn btn-dark edit-btn mt-3">Edit</button>
+
+
+    </form>
+</div>
+</div>
+
+
