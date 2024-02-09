@@ -11,6 +11,13 @@ router.get("/signup",(req,res)=>{
 });
 
 
+router.get("/signup",(req,res)=>{
+    const query=req.body;
+    console.log(query);
+    res.send("wait")
+});
+
+
 router.post("/signup",wrapasync(async(req,res)=>{
     try{
 

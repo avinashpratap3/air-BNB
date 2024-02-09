@@ -115,6 +115,22 @@ app.use("/listings",listingroute);
 
 
 app.use("/",userroute);
+app.use("/privacy",(req,res)=>{
+    
+    res.render("privacy.ejs");
+
+});
+app.use("/terms",(req,res)=>{
+    
+    res.render("terms.ejs");
+
+});
+
+app.use("/underconstruction",(req,res)=>{
+    
+    res.render("underconstruction.ejs");
+
+});
 
 
 app.listen(9000,()=>{

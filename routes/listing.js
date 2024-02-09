@@ -23,6 +23,14 @@ router.get("/",wrapasync(async (req,res)=>{
     const alllisting =await listing.find({});
     res.render("index.ejs",{alllisting});
     }));
+    router.post("/search",async(req,res)=>{
+        const query=req.body.search;
+        const selected=await listing.find({title:query});
+        // console.log(selected[0]._id);
+        res.redirect(`/listings/${selected[0]._id}`);
+        
+
+    });
     
     router.get("/new", issignedin ,(req,res)=>{
        
