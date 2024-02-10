@@ -26,6 +26,32 @@
     a{
         color: black;
     }
+    @media (max-width:480px){
+        #filters{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        
+    }
+    .filter{
+        text-align: center;
+        margin-right: 1.8rem;
+        opacity: 0.7;
+    }
+    .filter:hover{
+        opacity: 1;
+    }
+    .tax-info{
+        display: none;
+    }
+    .tax-toggle{
+        border: 1px solid black;
+        border-radius: 1rem;
+        height: 3.5rem;
+        padding: 1rem;
+        margin-left: 0rem;
+    }
+    }
 </style>
 
     
@@ -141,7 +167,7 @@
           </div>
     </div>
 </div>
-    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+    <div class="listings row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
         <% alllisting.forEach(listing => { %>
             <a href="/listings/<%= listing._id %>" class="listing_link">
                 <div class="card col listing-card" style="width: 20rem;">

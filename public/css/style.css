@@ -103,3 +103,66 @@ body{
     height: 400px;
     width:80vh;
 }
+a{
+    color: black;
+}
+
+
+@media (max-width:480px){
+    .navbar-nav{
+        background-color: white;
+    }
+    .listings{
+        display: flex !important;
+        align-content: center !important;
+        justify-content: center !important;
+    }
+    .card{
+        margin-left:35px;
+    }
+    .signin{
+        display: flex !important;
+        align-content: center !important;
+        justify-content: center !important;
+    }
+    .card-show{
+        margin-left: 100px;
+        
+    }
+    .btns{
+        display: flex !important;
+        align-content: center !important;
+        justify-content: start !important;
+        margin-left: 30px;
+        margin-top: 5px;
+
+    }
+    .edit-btn{
+        width: 50px;
+        
+    }
+    .all-review{
+        display: flex !important;
+        justify-content: start !important;
+
+    }
+    .card-review{
+        display: flex !important;
+        align-content: center !important;
+        justify-content: center !important;
+        width: 500px !important;
+        border: 1px solid black;
+        border-radius: 1rem;
+        margin-right: 20rem !important;
+
+    }
+    .delete{
+        margin-top: 50px;
+    }
+    #map{
+        width: 300px;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    
+}

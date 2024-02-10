@@ -9,7 +9,7 @@
             </div>
 
 
-    <div class="card col-6 offset-2 show-card listing-card" >
+    <div class="card-show col-6 offset-2 show-card listing-card" >
         <img src="<%= selected.image.url %>" class="card-img-top show-image" alt="listing_image">
         <div class="card-body">
           <p class="card-text">
@@ -113,14 +113,14 @@
         <hr>
        
         
-        <div class="row">
+        <div class="all-review row" style="margin-right: 50px;">
             <% if (selected.reviews.length>0) { %>
                 <h4>All Reviews</h4>
             <% } %>
             
             <% selected.reviews.forEach(element => { %>
                
-                <div class="card ms-3 col-5 mb-3" id="review" >
+                <div class="card-review ms-3 col-5 mb-3" id="review" >
                     <div class="card-body ">
                       <h5 class="card-title">@<%= element.author.username %></h5>
                       
@@ -133,7 +133,7 @@
 
                       
                     </div>
-                    <form class="mb-3" method="post" action="/listings/<%= selected._id %>/reviews/<%= element._id %>?_method=DELETE"><button type="submit" class="btn btn-sm btn-dark">Delete</button></form>
+                    <form class="mb-3" method="post" action="/listings/<%= selected._id %>/reviews/<%= element._id %>?_method=DELETE"><button type="submit" class="btn delete btn-sm btn-dark">Delete</button></form>
                     
                   </div>
                
